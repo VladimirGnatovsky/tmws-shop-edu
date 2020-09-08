@@ -18,10 +18,21 @@ class PagesController extends Controller
 
     private function _get_info_data() {
     	$styles = '';
-    	$body = '';
+        $title = 'Info';
 
 
 
-    	return compact( 'styles', 'body' );
+    	return compact( 'styles', 'title' );
+    }
+
+    public function about() {
+        return view('about')->with([
+            'title' => 'About Us'
+        ]);
+    }
+    public function contact() {
+        return view('contact')->with([
+            'title' => 'Contact Us'
+        ]);
     }
 }

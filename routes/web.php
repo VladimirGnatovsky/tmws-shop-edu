@@ -13,9 +13,8 @@ use App\Http\Controllers\PagesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', 'PagesController@index');
 Route::get('/info', 'PagesController@info');
-
-Route::get('/welcome/{value}', function ($value) {
-    return view('welcome', ['title'=>$value]);
-});
+Route::get('/about', 'PagesController@about');
+Route::get('/contact', 'PagesController@contact');
